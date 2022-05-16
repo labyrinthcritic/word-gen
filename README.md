@@ -1,4 +1,5 @@
     word-gen 0.1.0
+    medricet
     
     USAGE:
         word-gen [OPTIONS]
@@ -10,3 +11,4 @@
             --min-clusters <MIN_CLUSTERS>    [default: 2]
         -v, --variance <VARIANCE>            [default: 1]
         -V, --version                        Print version information
+    
