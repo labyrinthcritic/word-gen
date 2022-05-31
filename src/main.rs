@@ -25,6 +25,10 @@ const DEFAULT_FREQUENCY_RANK: f64 = 0.6;
 fn main() {
     let args = Args::parse();
 
+    if args.min_clusters > args.max_clusters {
+        panic!("min cluster count cannot be greater than max cluster count");
+    }
+
     let consonant_distribution = rand_distr::Zipf::new(21, DEFAULT_FREQUENCY_RANK / args.variance)
         .expect("Failed to create a Zipf distribution");
     let vowel_distribution = rand_distr::Zipf::new(5, 0.6).unwrap();
